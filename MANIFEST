@@ -1,0 +1,11 @@
+META.yml # Will be created by "make dist"
+Changes
+MANIFEST
+Makefile.PL
+README
+
+lib/Module/Starter/Plugin/TT2.pm
+
+t/00.load.t
+t/pod-coverage.t
+t/pod.t
