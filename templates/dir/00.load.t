@@ -1,4 +1,4 @@
-use Test::More tests => [% modules.length %];
+use Test::More tests => [% modules.size %];
 
 BEGIN {
 [% FOREACH module = modules -%]
@@ -6,4 +6,4 @@ BEGIN {
 [% END -%]
 }
 
-diag( "Testing [%main_module%] $[%main_module%]::VERSION" );
+diag( "Testing [%modules.0%] $[%modules.0%]::VERSION" );

@@ -1,6 +1,6 @@
 package Module::Starter::Plugin::TT2;
 
-our $VERSION = '0.04';
+our $VERSION = '0.10';
 
 use Template;
 
@@ -28,6 +28,10 @@ This Module::Starter plugin is intended to be loaded after
 Module::Starter::Plugin::Template.  It implements the C<renderer> and C<render>
 methods, required by the Template plugin.  The methods are implemented with
 Template Toolkit.
+
+This module's distribution includes a directory, C<templates/dir>, and a file
+C<templates/inline> that contain stock templates for use with the InlineStore
+and DirStore plugins.
 
 =head1 METHODS
 
