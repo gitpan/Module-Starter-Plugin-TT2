@@ -9,8 +9,9 @@ WriteMakefile(
     ABSTRACT_FROM       => 'lib/Module/Starter/Plugin/TT2.pm',
     PL_FILES            => {},
     PREREQ_PM => {
-        'Test::More' => 0,
-        'Template'   => 2,
+		    'Module::Starter' => 1.25_01,
+        'Test::More'      => 0,
+        'Template'        => 2,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Module-Starter-Plugin-TT2-*' },

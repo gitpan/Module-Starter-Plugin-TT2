@@ -1,6 +1,6 @@
 package Module::Starter::Plugin::TT2;
 
-our $VERSION = '0.01';
+our $VERSION = '0.04';
 
 use Template;
 
