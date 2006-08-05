@@ -1,4 +1,3 @@
-META.yml			# Will be created by "make dist"
 MANIFEST
 README
 Changes
@@ -21,3 +20,4 @@ templates/dir/pod-coverage.t
 templates/dir/pod.t
 templates/dir/README
 templates/inline
+META.yml                                 Module meta-data (added by MakeMaker)
