@@ -1,13 +1,16 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         Module-Starter-Plugin-TT2
-version:      0.121
-version_from: lib/Module/Starter/Plugin/TT2.pm
-installdirs:  site
-requires:
+--- #YAML:1.0
+name:                Module-Starter-Plugin-TT2
+version:             0.122
+abstract:            TT2 templates for Module::Starter::Template
+license:             ~
+generated_by:        ExtUtils::MakeMaker version 6.31
+distribution_type:   module
+requires:     
     Module::Starter:               1.2501
     Template:                      2
     Test::More:                    0
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
+    version: 1.2
+author:
+    - Ricardo SIGNES <rjbs@cpan.org>

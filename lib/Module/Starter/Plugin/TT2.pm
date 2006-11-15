@@ -1,11 +1,10 @@
-package Module::Starter::Plugin::TT2;
-
-our $VERSION = '0.121';
-
-use Template;
-
 use warnings;
 use strict;
+package Module::Starter::Plugin::TT2;
+
+our $VERSION = '0.122';
+
+use Template;
 
 =head1 NAME
 
@@ -13,9 +12,9 @@ Module::Starter::Plugin::TT2 - TT2 templates for Module::Starter::Template
 
 =head1 VERSION
 
-version 0.121
+version 0.122
 
- $Id: TT2.pm,v 1.6 2004/10/20 02:55:27 rjbs Exp $
+ $Id: /my/cs/projects/ms/tt2/trunk/lib/Module/Starter/Plugin/TT2.pm 28098 2006-11-15T01:13:49.931818Z rjbs  $
 
 =head1 SYNOPSIS
 
@@ -50,7 +49,7 @@ your config file (C<~/.module-starter/config>):
  author: Lord Poncemby
  email: ponce@peerage.eng
  plugins: Module::Starter::Simple Module::Starter::Plugin::Template
-  Module::Starter::Plugin::Module::Store Module::Starter::Plugin::TT2
+  Module::Starter::Plugin::ModuleStore Module::Starter::Plugin::TT2
  template_module: Module::Starter::Plugin::TT2
 
 (Where the plugins line is one line.)  This tells Module::Starter to look for
@@ -82,16 +81,16 @@ and returns the resulting document.
 =cut
 
 sub render {
-	my $self = shift;
-	my $template = shift;
-	my $options = shift;
-	my $output;
+  my $self = shift;
+  my $template = shift;
+  my $options = shift;
+  my $output;
 
-	$options->{self} = $self;
-	$options->{year} = $self->_thisyear;
-	
-	$self->renderer->process(\$template, $options, \$output);
-	return $output;
+  $options->{self} = $self;
+  $options->{year} = $self->_thisyear;
+  
+  $self->renderer->process(\$template, $options, \$output);
+  return $output;
 }
 
 =head1 AUTHOR
@@ -100,7 +99,7 @@ Ricardo SIGNES, C<< <rjbs@cpan.org> >>
 
 =head1 COPYRIGHT
 
-Copyright 2004 Ricardo SIGNES, All Rights Reserved.
+Copyright 2004-2006 Ricardo SIGNES, All Rights Reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
@@ -122,11 +121,11 @@ use strict;
 
 =head1 VERSION
 
-Version 0.01
+version 0.001
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.001';
 
 =head1 SYNOPSIS
 
@@ -191,6 +190,7 @@ WriteMakefile(
     AUTHOR              => '[% self.author %] <[% self.email %]>',
     VERSION_FROM        => '[%main_pm_file%]',
     ABSTRACT_FROM       => '[%main_pm_file%]',
+    LICENSE             => 'perl',
     PL_FILES            => {},
     PREREQ_PM => {
         'Test::More' => 0,
@@ -219,7 +219,7 @@ $builder->create_build_script();
 ___Changes___
 Revision history for [%self.distro%]
 
-0.01    Date/time
+0.001   Date/time
         First version, released on an unsuspecting world.
 
 ___README___
@@ -257,9 +257,9 @@ ___pod-coverage.t___
 use Test::More;
 eval "use Test::Pod::Coverage 1.04";
 plan skip_all => "Test::Pod::Coverage 1.04 required for testing POD coverage"
-	if $@;
+    if $@;
 all_pod_coverage_ok();
-___00.load.t___
+___00-load.t___
 use Test::More tests => [% modules.size %];
 
 BEGIN {
