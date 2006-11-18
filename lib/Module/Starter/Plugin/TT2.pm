@@ -2,7 +2,7 @@ use warnings;
 use strict;
 package Module::Starter::Plugin::TT2;
 
-our $VERSION = '0.122';
+our $VERSION = '0.123';
 
 use Template;
 
@@ -12,9 +12,9 @@ Module::Starter::Plugin::TT2 - TT2 templates for Module::Starter::Template
 
 =head1 VERSION
 
-version 0.122
+version 0.123
 
- $Id: /my/cs/projects/ms/tt2/trunk/lib/Module/Starter/Plugin/TT2.pm 28098 2006-11-15T01:13:49.931818Z rjbs  $
+ $Id: /my/cs/projects/ms/tt2/trunk/lib/Module/Starter/Plugin/TT2.pm 28263 2006-11-18T19:46:31.410703Z rjbs  $
 
 =head1 SYNOPSIS
 

@@ -1,8 +1,8 @@
 --- #YAML:1.0
 name:                Module-Starter-Plugin-TT2
-version:             0.122
+version:             0.123
 abstract:            TT2 templates for Module::Starter::Template
-license:             ~
+license:             perl
 generated_by:        ExtUtils::MakeMaker version 6.31
 distribution_type:   module
 requires:     
